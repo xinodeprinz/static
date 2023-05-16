@@ -1,0 +1,236 @@
+/* General */
+:root {
+    --primary: black;
+    --secondary: orange;
+    --tertiary: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1,
+h4 {
+    color: var(--primary);
+}
+
+body {
+    position: relative;
+    height: 100vh;
+}
+
+/* End of General */
+
+/* Navbar */
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: var(--primary);
+    color: var(--tertiary);
+    padding: 1.5rem 0;
+}
+
+.navbar h1 {
+    text-transform: capitalize;
+    color: var(--tertiary);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.navbar li {
+    list-style: none;
+    padding-left: 4rem;
+}
+
+.navbar span,
+.active {
+    color: var(--secondary);
+}
+
+/* End of navbar */
+
+/* Body */
+.body {
+    margin-top: 5rem;
+}
+
+.body h1 {
+    text-transform: capitalize;
+    font-size: 35px;
+    margin-bottom: 3rem;
+}
+
+.body .grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 2rem;
+    text-align: justify;
+}
+
+.body h4 {
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+.body .main div:first-child {
+    margin-bottom: 3rem;
+}
+
+.body p {
+    font-size: 19px;
+    line-height: 1.3em;
+}
+
+/* End of body */
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--tertiary);
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1.5fr;
+}
+
+footer h4 {
+    color: var(--secondary) !important;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+footer .child:first-child div {
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    font-size: 19px;
+    line-height: 1.2em;
+}
+
+footer form {
+    margin-top: 1rem;
+}
+
+footer input {
+    outline: 0;
+    height: 1.5rem;
+    padding: 0.2rem 0.1rem;
+    font-size: 16px;
+    color: var(--primary);
+}
+
+footer input:focus {
+    outline: 0;
+}
+
+footer input::placeholder {
+    color: #333;
+}
+
+footer button {
+    height: 2rem;
+    padding: 0 0.4rem;
+    font-size: 18px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    outline: 0;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+footer button:hover {
+    opacity: 0.8;
+}
+
+footer .icons a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 0.5rem;
+}
+
+.slogan {
+    text-transform: capitalize;
+    margin-top: 0.5rem;
+}
+
+footer .child:last-child {
+    margin-left: 2rem;
+}
+
+/* End of footer */
+
+
+/* Responsiveness */
+
+@media (max-width: 1399px) {
+    footer {
+        position: static;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar .container {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar li {
+        padding-left: 0;
+    }
+
+    .navbar ul {
+        justify-content: space-around;
+        padding-top: 2rem;
+    }
+
+    .body .grid {
+        display: block;
+    }
+
+    aside {
+        margin-top: 3rem;
+    }
+
+    .footer-grid {
+        display: block;
+    }
+
+    footer .child {
+        margin-bottom: 1rem;
+    }
+
+    footer .child:last-child,
+    footer .icons a:first-child {
+        margin-left: 0;
+    }
+
+    .slogan {
+        margin-top: 1.2rem;
+    }
+}
